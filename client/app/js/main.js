@@ -7,8 +7,8 @@ document.addEventListener('mousemove', function (e) {
     var toLeft, toTop,
       lightning = document.querySelector('._' + getRandomInt(1,9)),
       core = document.querySelector('.core'),
-      widthX = e.pageX - core.getBoundingClientRect().x,
-      widthY = e.pageY - core.getBoundingClientRect().y,
+      widthX = e.pageX - core.getBoundingClientRect().left,
+      widthY = e.pageY - core.getBoundingClientRect().top,
       width = findWidth(widthX, widthY),
       angle = findAngle(widthX, widthY);
     angle = angle > 0 ? angle + 90 : angle - 270;
@@ -30,9 +30,11 @@ document.addEventListener('mousemove', function (e) {
 function animate (element, interval) {
   element.classList.remove('hidden');
   document.querySelector('.center-bolt').style.opacity = '1';
+  document.querySelector('body').style.backgroundColor = '#2c3e50';
   setTimeout(function() {
     element.classList.add('hidden');
     document.querySelector('.center-bolt').style.opacity = '0.4';
+    document.querySelector('body').style.backgroundColor = 'black';
   }, interval);
 
   return element;

@@ -7,17 +7,16 @@ body {
 }
 .center-bolt {
     display: flex;
-    height: 275px;
-    width: 275px;
-    border-radius: 100%;
-    margin: auto;
-    background-image: url('img/main.gif');
+    height: 300px;
+    width: 600px;
+    margin: 10% auto;
+    background-image: url('img/cloud.png');
     opacity: 0.4;
     background-position: center;
 }
 .core {
     position:relative;
-    margin: auto;
+    margin: auto auto 0;
     width: 10px;
     height: 10px;
 }
