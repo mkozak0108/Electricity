@@ -1,24 +1,25 @@
 body {
     background-color: #2c3e50;
     color: #bdc3c7;
+    min-height: 600px;
+    display: flex;
+    overflow: hidden;
 }
 .center-bolt {
     display: flex;
-    position: relative;
     height: 200px;
     width: 200px;
     border-radius: 100%;
     background-color: #2980b9;
-    margin-left: 45%;
-    margin-top: 10%;
+    margin: auto
 }
 .core {
+    position:relative;
     margin: auto;
     width: 10px;
     height: 10px;
 }
 .lightning {
-    margin: auto;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
