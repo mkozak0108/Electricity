@@ -1,6 +1,6 @@
 var counter =0;
 document.addEventListener('mousemove', function (e) {
-  if (counter != 8) {
+  if (counter != 20) {
     counter += 1;
   }
   else {
@@ -29,8 +29,10 @@ document.addEventListener('mousemove', function (e) {
 
 function animate (element, interval) {
   element.classList.remove('hidden');
+  document.querySelector('.center-bolt').style.opacity = '1';
   setTimeout(function() {
     element.classList.add('hidden');
+    document.querySelector('.center-bolt').style.opacity = '0.4';
   }, interval);
 
   return element;
