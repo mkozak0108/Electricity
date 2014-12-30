@@ -1,9 +1,4 @@
-var counter =0;
-document.addEventListener('mousemove', function (e) {
-  if (counter != 20) {
-    counter += 1;
-  }
-  else {
+document.addEventListener('click', function (e) {
     var toLeft, toTop,
       lightning = document.querySelector('._' + getRandomInt(1,9)),
       core = document.querySelector('.core'),
@@ -23,10 +18,10 @@ document.addEventListener('mousemove', function (e) {
       lightning.style.transform = 'rotate(' + angle + 'deg)';
       animate(lightning, 100);
     }
-    counter = 0;
-  }
 });
-
+document.addEventListener('mousemove', function (e) {
+  Meteor.call('mouseMove', e.pageX, e.pageY);
+});
 function animate (element, interval) {
   element.classList.remove('hidden');
   document.querySelector('.center-bolt').style.opacity = '1';

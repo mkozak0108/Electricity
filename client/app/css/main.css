@@ -3,7 +3,9 @@ body {
     color: #bdc3c7;
     min-height: 600px;
     display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
+    cursor: none;
 }
 .center-bolt {
     display: flex;
@@ -16,7 +18,7 @@ body {
 }
 .core {
     position:relative;
-    margin: auto auto 0;
+    margin: auto auto 20%;
     width: 10px;
     height: 10px;
 }
@@ -29,4 +31,16 @@ body {
 }
 .hidden {
     opacity: 0;
+}
+.rain {
+    background-image: url('img/rain.png');
+    margin: -150px 100px 0 auto;
+    height: 1000px;
+    width: 700px;
+}
+.pointer {
+    position: absolute;
+    background-image: url('img/magnet.png');
+    width: 80px;
+    height: 80px;
 }
