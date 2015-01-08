@@ -8,7 +8,7 @@
 
 <template name="bolt">
   {{#each pointers}}
-    <span class="pointer" style="left: {{x}}px; top: {{y}}px;"></span>
+    <span id="{{createdBy}}" class="pointer" style="left: {{x}}px; top: {{y}}px;"></span>
   {{/each}}
   <div class="center-bolt">
     <div class="core">

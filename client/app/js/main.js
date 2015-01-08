@@ -1,4 +1,15 @@
+var cloudPosition = 100;
+setInterval(function () {
+  cloudPosition += 100;
+  document.querySelector('.center-bolt').style.transform = 'translate(' + cloudPosition + 'px)';
+  document.querySelector('.center-bolt').style.display = 'flex';
+  if (window.innerWidth - 100 < cloudPosition) {
+    cloudPosition = (window.innerWidth * -1);
+    document.querySelector('.center-bolt').style.display = 'none'
+  }
+},2000);
 document.addEventListener('click', function (e) {
+  Meteor.call('clicked');
     var toLeft, toTop,
       lightning = document.querySelector('._' + getRandomInt(1,9)),
       core = document.querySelector('.core'),

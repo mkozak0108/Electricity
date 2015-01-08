@@ -8,5 +8,7 @@ Meteor.onConnection(function (connection) {
 Meteor.methods({
   mouseMove: function (x, y) {
     pointers.update({createdBy: this.connection.id}, {createdBy: this.connection.id, x: x, y: y})
+  },
+  clicked: function () {
   }
 });
