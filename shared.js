@@ -1,1 +1,0 @@
-pointers = new Mongo.Collection('pointers');
